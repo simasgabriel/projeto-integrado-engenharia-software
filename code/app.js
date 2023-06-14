@@ -1,6 +1,20 @@
 const express= require('express');
-const app = express();
 const path = require('path');
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:270117/restaurantesCriancas',{
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true
+});
+
+const db=mongoose.connection;
+db.on('error', console.error.bind(console, "connection error"));
+db.once("open",() => {
+    console.log("database connected");
+})
+
+const app = express();
+
 
 
 app.set('view engine', 'ejs');
