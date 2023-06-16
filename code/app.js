@@ -1,9 +1,9 @@
 const express= require('express');
 const path = require('path');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:270117/restaurantesCriancas',{
+mongoose.connect('mongodb://localhost:27017/restaurantesCriancas',{
     useNewUrlParser: true,
-    useCreateIndex: true,
+    
     useUnifiedTopology: true
 });
 
