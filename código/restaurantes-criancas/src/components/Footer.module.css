@@ -15,10 +15,10 @@
 .footer li {
   margin-right: 3em;
 }
-
 a {
   color: darkblue;
   text-decoration: none;
+  list-style-type: none;
 }
 
 a:hover {

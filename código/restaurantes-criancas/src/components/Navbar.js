@@ -3,12 +3,12 @@ import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   return (
-    <nav>
-      <NavLink to="/">
+    <nav className={styles.navbar}>
+      <NavLink to="/" className={styles.brand}>
         Restaurantes <span>para Crianças</span>
       </NavLink>
 
-      <ul>
+      <ul className={styles.links_list}>
         <li>
           <NavLink to="/">Página Inicial</NavLink>
         </li>
