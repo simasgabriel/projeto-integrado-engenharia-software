@@ -1,0 +1,26 @@
+.footer {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  background-color: #edf3f6;
+}
+
+.footer ul {
+  display: flex;
+
+  justify-content: flex-start;
+
+  list-style: none;
+}
+.footer li {
+  margin-right: 3em;
+}
+
+a {
+  color: darkblue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: hotpink;
+}
