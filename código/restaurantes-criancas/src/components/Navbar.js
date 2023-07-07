@@ -10,13 +10,10 @@ const Navbar = () => {
 
       <ul className={styles.links_list}>
         <li>
-          <NavLink to="/">Página Inicial</NavLink>
+          <NavLink to="/Register">Cadastrar-se</NavLink>
         </li>
         <li>
-          <NavLink to="/QuemSomos">Quem somos </NavLink>
-        </li>
-        <li>
-          <NavLink to="/FaleConosco">Fale Conosco </NavLink>
+          <NavLink to="/Login">Entrar </NavLink>
         </li>
       </ul>
     </nav>
