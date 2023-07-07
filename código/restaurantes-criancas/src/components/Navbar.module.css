@@ -21,3 +21,21 @@
 .links_list li a {
   padding: 0.4em 0.6em;
 }
+
+.btn {
+  background-color: blue;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 100px;
+  font-weight: bold;
+  border: none;
+
+  padding: 10px 15px;
+  font-size: 1em;
+}
+
+.btn:hover {
+  background-color: hotpink;
+}
