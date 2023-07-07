@@ -1,9 +1,25 @@
 .titulo {
   height: 50vh;
+  margin: 0;
   background: rgb(244, 40, 128);
   background: linear-gradient(
     329deg,
     rgba(244, 40, 128, 0.6544622425629291) 0%,
     rgba(3, 113, 245, 1) 100%
   );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand {
+  font-family: "Mansalva", cursive;
+  font-size: 3em;
+  font-weight: 500;
+  color: white;
+}
+.titulo p {
+  color: white;
+  font-size: 1.2em;
 }
