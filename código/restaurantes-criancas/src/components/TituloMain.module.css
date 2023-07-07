@@ -1,0 +1,9 @@
+.titulo {
+  height: 50vh;
+  background: rgb(244, 40, 128);
+  background: linear-gradient(
+    329deg,
+    rgba(244, 40, 128, 0.6544622425629291) 0%,
+    rgba(3, 113, 245, 1) 100%
+  );
+}

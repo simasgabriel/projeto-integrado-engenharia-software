@@ -6,12 +6,14 @@ import QuemSomos from "./pages/QuemSomos/QuemSomos";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FaleConosco from "./pages/FaleConosco/FaleConosco";
+import TituloMain from "./components/TituloMain";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Navbar />
+        <TituloMain />
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
