@@ -1,7 +1,17 @@
 import "./App.css";
-
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
+
+
+// context
+import { AuthProvider } from "./context/AuthContext";
+
+// hooks
+import { useState, useEffect } from "react";
+import { useAuthentication } from "./hooks/useAuthentication";
+
+
+
 import Home from "./pages/Home/Home";
 import QuemSomos from "./pages/QuemSomos/QuemSomos";
 import Navbar from "./components/Navbar";
@@ -11,12 +21,9 @@ import TituloMain from "./components/TituloMain";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
 
-// context
-import { AuthProvider } from "./context/AuthContext";
 
-// hooks
-import { useState, useEffect } from "react";
-import { useAuthentication } from "./hooks/useAuthentication";
+import CreatePost from "./pages/CreatePost/CreatePost";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -46,6 +53,11 @@ function App() {
               <Route path="/faleconosco" element={<FaleConosco />} />
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/posts/" element={<CreatePost />} />
+              <Route
+                path="/dashboard"
+                element={<Dashboard />}
+              />
             </Routes>
           </div>
           <Footer />
