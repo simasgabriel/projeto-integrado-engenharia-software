@@ -14,6 +14,16 @@ const Navbar = () => {
 
       {!user && (
         <>
+        <li className={styles.links_list}></li>
+        <li className={styles.links_list}></li>
+        <li className={styles.links_list}>
+            <NavLink
+              to="/register"
+              className={({ isActive }) => (isActive ? styles.active : "")}
+            >
+              Cadastrar-se
+            </NavLink>
+          </li>
           <li className={styles.links_list}>
             <NavLink
               to="/login"
@@ -22,18 +32,13 @@ const Navbar = () => {
               Entrar
             </NavLink>
           </li>
-          <li className={styles.links_list}>
-            <NavLink
-              to="/register"
-              className={({ isActive }) => (isActive ? styles.active : "")}
-            >
-              Cadastrar-se
-            </NavLink>
-          </li>
+          
         </>
       )}
       {user && (
         <>
+        <li className={styles.links_list}></li>
+        <li className={styles.links_list}></li>
           <li className={styles.links_list}>
             <NavLink
               to="/posts/create"
