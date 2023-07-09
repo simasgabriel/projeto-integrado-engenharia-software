@@ -10,7 +10,7 @@ import { useState } from "react";
 import PostDetail from "../../components/PostDetail";
 
 const Home = () => {
-  //const { documents: posts, loading } = useFetchDocuments("posts");
+  const { documents: posts, loading } = useFetchDocuments("posts");
 
   const navigate = useNavigate();
 
@@ -41,9 +41,9 @@ const Home = () => {
         {loading && <p>Carregando...</p>}
         {posts && posts.length === 0 && (
           <div className={styles.noposts}>
-            <p>Não foram encontrados posts</p>
+            <p>Não foram encontrados perfis de restaurantes</p>
             <Link to="/posts/create" className="btn">
-              Criar primeiro post
+              Criar primeiro perfil de restaurante
             </Link>
           </div>
         )}
