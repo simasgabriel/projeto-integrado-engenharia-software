@@ -120,13 +120,13 @@ const CreatePost = () => {
             type="text"
             name="tags"
             required
-            placeholder="Digite nome e bairro do restaurante, separados por vírgulas"
+            placeholder="Digite nome,bairro e cidade do restaurante, separados por vírgulas"
             onChange={(e) => setTags(e.target.value)}
             value={tags}
           />
         </label>
 
-       {!response.loading && <button className="btn">Criar post!</button>}
+       {!response.loading && <button className="btn">Criar perfil!</button>}
         {response.loading && (
           <button className="btn" disabled>
             Aguarde.. .
