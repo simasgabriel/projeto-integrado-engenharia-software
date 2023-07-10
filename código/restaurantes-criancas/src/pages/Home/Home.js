@@ -1,4 +1,3 @@
-
 import styles from "./Home.module.css";
 
 // hooks
@@ -32,7 +31,7 @@ const Home = () => {
       <form className={styles.search_form} onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Ou busque por nome do restaurante, bairro ou cidade..."
+          placeholder="Ou busque por nome do restaurante, bairro ou cidade, usando miniscúlas"
           onChange={(e) => setQuery(e.target.value)}
         />
         <button className="btn ">Pesquisar</button>
