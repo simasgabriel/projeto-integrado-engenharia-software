@@ -14,7 +14,7 @@ const Post = () => {
       {post && (
         <>
           <h1>{post.title}</h1>
-          <img src={post.image} alt={post.title} />
+          <img className={styles.postImage} src={post.image} alt={post.title} />
           <h3>Restaurante {post.title}</h3>
           <h3>Endereço e contato do restaurante:</h3>
           <p>{post.enderecoTelefone}</p>
