@@ -68,3 +68,11 @@ textarea {
 button[disabled] {
   background-color: #aaa;
 }
+
+.btn.btn-danger {
+  background-color: #dc3545;
+}
+
+.btn.btn-danger:hover {
+  background-color: hotpink;
+}
