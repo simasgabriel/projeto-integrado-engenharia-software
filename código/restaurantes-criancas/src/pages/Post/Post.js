@@ -15,19 +15,13 @@ const Post = () => {
         <>
           <h1>{post.title}</h1>
           <img src={post.image} alt={post.title} />
+          <h3>Restaurante {post.title}</h3>
           <h3>Endereço e contato do restaurante:</h3>
-          <p>{post.body}</p>
+          <p>{post.enderecoTelefone}</p>
+          <h3>Tipo de culinária do restaurante:</h3>
+          <p>{post.tipoCulinaria}</p>
           <h3>Comodidades do restaurante voltadas ao público infantil:</h3>
           <p>{post.comodidades}</p>
-          <h3>Este post trata sobre:</h3>
-          <div className={styles.tags}>
-            {post.tags.map((tag) => (
-              <p key={tag}>
-                <span>#</span>
-                {tag}
-              </p>
-            ))}
-          </div>
         </>
       )}
     </div>

@@ -8,7 +8,8 @@ import { useAuthValue } from "../../context/AuthContext";
 const CreatePost = () => {
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
-  const [body, setBody] = useState("");
+  const [enderecoTelefone, setEnderecoTelefone] = useState("");
+  const [tipoCulinaria, setTipoCulinaria] = useState("");
   const [comodidades, setComodidades] = useState("");
   const [tags, setTags] = useState([]);
   const [formError, setFormError] = useState("");
@@ -34,7 +35,7 @@ const CreatePost = () => {
     const tagsArray = tags.split(",").map((tag) => tag.trim().toLowerCase());
 
     // check values
-    if (!title || !image || !tags || !body) {
+    if (!title || !image || !tags || !enderecoTelefone) {
       setFormError("Por favor, preencha todos os campos!");
     }
 
@@ -43,25 +44,26 @@ const CreatePost = () => {
     console.log({
       title,
       image,
-      body,
+      enderecoTelefone,
+      tipoCulinaria,
       comodidades,
       tags: tagsArray,
       uid: user.uid,
       createdBy: user.displayName,
     });
 
-    if(formError) return
+    if (formError) return;
 
     insertDocument({
       title,
       image,
-      body,
+      enderecoTelefone,
+      tipoCulinaria,
       comodidades,
       tags: tagsArray,
       uid: user.uid,
       createdBy: user.displayName,
     });
-    
 
     // redirect to home page
     navigate("/");
@@ -70,7 +72,7 @@ const CreatePost = () => {
   return (
     <div className={styles.create_post}>
       <h2>Criar novo perfil de restaurante</h2>
-      
+
       <form onSubmit={handleSubmit}>
         <label>
           <span>Nome do restaurante:</span>
@@ -88,7 +90,6 @@ const CreatePost = () => {
           <input
             type="text"
             name="image"
-            
             placeholder="Insira uma imagem do retaurante"
             onChange={(e) => setImage(e.target.value)}
             value={image}
@@ -97,15 +98,27 @@ const CreatePost = () => {
         <label>
           <span>Endereço e contato do restaurante:</span>
           <textarea
-            name="body"
+            name="enderecoTelefone"
             required
             placeholder="Insira o endereço e telefone do restaurante"
-            onChange={(e) => setBody(e.target.value)}
-            value={body}
+            onChange={(e) => setEnderecoTelefone(e.target.value)}
+            value={enderecoTelefone}
           ></textarea>
         </label>
         <label>
-          <span>Comodidades do restaurante voltados para o público infantil:</span>
+          <span>Categoria do restaurante:</span>
+          <textarea
+            name="tipoCulinaria"
+            required
+            placeholder="Insira o tipo de culinária do restaurante"
+            onChange={(e) => setTipoCulinaria(e.target.value)}
+            value={tipoCulinaria}
+          ></textarea>
+        </label>
+        <label>
+          <span>
+            Comodidades do restaurante voltados para o público infantil:
+          </span>
           <textarea
             name="comodidades"
             required
@@ -126,7 +139,7 @@ const CreatePost = () => {
           />
         </label>
 
-       {!response.loading && <button className="btn">Criar perfil!</button>}
+        {!response.loading && <button className="btn">Criar perfil!</button>}
         {response.loading && (
           <button className="btn" disabled>
             Aguarde.. .
@@ -135,8 +148,6 @@ const CreatePost = () => {
         {(response.error || formError) && (
           <p className="error">{response.error || formError}</p>
         )}
-
-        
       </form>
     </div>
   );
