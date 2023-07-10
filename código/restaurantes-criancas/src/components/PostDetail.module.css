@@ -4,7 +4,8 @@
     
   align-items: center;
   justify-content: center;
-  width: 100%;
+  max-width: 97%;
+  margin: 1px;
   
  
   }
