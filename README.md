@@ -5,4 +5,6 @@ Link do protótipo navegável criado com o Framer: <https://large-stories-107935
 
 Link da aplicação:<https://restaurantes-para-criancas.vercel.app/>
 
+Vídeo de apresentação da aplicação: <https://youtu.be/XRmQRu4HUzg>
+
 
